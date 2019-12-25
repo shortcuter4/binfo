@@ -31,6 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # @shortcuter4
+    # ''homepage.apps.HomepageConfig'' is added to INSTALLED_APPS in order to
+    # let Django know to look here for homepage templates
+    # It is recommended to add our app configuration to our project
+    # settings every time immediately since it could be easily forgotten.
+    'homepage.apps.HomepageConfig',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
