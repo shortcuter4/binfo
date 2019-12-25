@@ -14,8 +14,28 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+
+# @shortcuter4
+# Main URLS of a website are below, and when the user navigated to any of
+# URLS below, such as 'homepage', it will check if there is any pattern
+# that matches 'homepage' and if we do have a match , and the user wants
+# to see '/homepage/' page, then this 'include()' function determines
+# where the URLS is kept which is in 'homepage.urls' file , so it will
+# process it
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('homepage/', include('homepage.urls')),
+
+
+# @shortcuter4	
+# This (below) does not have to be written since it is already processed
+# above..  'homepage.urls' - URLS!!!
+	#path('homepage/login/', include('homepage.urls'))
+
+# @shortcuter4
+# This include function above allows us to add our list of URL patterns to
+# specify which route should go to our 'homepage' URLS
 ]
