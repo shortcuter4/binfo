@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<!-- @shortcuter4 -->
+<!-- It extends base.html file and add the specific data into specific place -->
+{% extends "homepage/base.html" %}
+{% block content %}
+	<!-- @shortcuter4 -->
+	<!-- It prints the posts' titles, author, post date and content -->
 	{% for post in posts %}
 		<h1>{{ post.title }}</h1>
 		<p> By {{ post.author }} on {{ post.date_posted }}</p>
 		<p>{{ post.content }}</h1>
 	{% endfor %}
-</body>
-</html>
+{% endblock content %}
