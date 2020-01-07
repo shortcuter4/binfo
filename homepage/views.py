@@ -36,4 +36,4 @@ def login(request):
 # @shortcuter4
 # This is the view of About page
 def about(request):
-	return render(request, 'homepage/about.html')
+	return render(request, 'homepage/about.html', {'title': 'About'})
